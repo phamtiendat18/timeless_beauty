@@ -6,6 +6,10 @@ import "swiper/css/pagination";
 import Header from "../components/Header";
 import Product from "../components/Product";
 import img1 from "../assets/images/img-prod-1.png";
+import img2 from "../assets/images/image2.png";
+import img3 from "../assets/images/image3.png";
+import img4 from "../assets/images/image4.png";
+import img5 from "../assets/images/image5.png";
 import footer from "../assets/images/footer.png";
 import banner from "../assets/images/banner.png";
 import brand from "../assets/images/brand.png";
@@ -18,110 +22,88 @@ import { Navigation, Pagination } from "swiper/modules";
 const products = [
   {
     image: img1,
-    title: "Sản phẩm 1",
+    title: "Serum Torrien DIVE IN chứa Hyaluronic Acid",
     price: "200.000đ",
-    oldPrice: "1000đ",
+    oldPrice: "300.000đ",
     sold: 120,
   },
   {
-    image: img1,
-    title: "Sản phẩm 2",
+    image: img2,
+    title: "Phấn Nước Cushion Clio Kill Cover Mesh Glow SPF50++15g",
     price: "300.000đ",
-    oldPrice: "1000đ",
+    oldPrice: "500.000đ",
     sold: 85,
   },
   {
-    image: img1,
-    title: "Sản phẩm 3",
-    price: "100.000đ",
-    oldPrice: "1000đ",
+    image: img3,
+    title: "Kem Nền Freshian Thuần Chay Căng Bóng SPF35 PA++ 30ml",
+    price: "100.000đ-250.000đ",
+    oldPrice: "200.000đ-432.000đ",
     sold: 45,
   },
   {
-    image: img1,
-    title: "Sản phẩm 4",
+    image: img4,
+    title: "Kem Nền Maybelline Mỏng Nhẹ Kiềm Dầu Chống Nắng",
     price: "250.000đ",
-    oldPrice: "1000đ",
+    oldPrice: "400.000đ",
     sold: 78,
   },
   {
-    image: img1,
-    title: "Sản phẩm 5",
-    price: "150.000đ",
-    oldPrice: "1000đ",
+    image: img5,
+    title: "Sữa Rửa Mặt Dành Cho Da Dầu CeraVe Foaming Cleanser ",
+    price: "150.000đ-289.000đ",
+    oldPrice: "200.000đ-322.000đ",
     sold: 98,
+  },
+  {
+    image: img4,
+    title: "Kem Nền Freshian Thuần Chay Căng Bóng SPF35 PA++ 30ml",
+    price: "150.000đ",
+    oldPrice: "230.000đ",
+    sold: 78,
   },
 ];
 
 export default function Home() {
   return (
     <div>
-      <Header />
-      <div className="h-[62px] flex items-center pl-[85px] bg-[#FEECF0]">
-        <p className="text-[18px]">
-          Trang chủ &gt;&gt;{" "}
-          <span className="text-[#E45C81] font-bold">Trang chủ</span>{" "}
-        </p>
-      </div>
+      <Header path1={"Trang chủ"} />
       <div className="w-full">
         <img src={banner} className="w-full" alt="" />
       </div>
-      <div className=" mb-[33px]">
+      <div className=" mb-[33px] mx-[85px]">
         <div>
-          <div className="bg-[#FEECF0] h-[82px] flex justify-center items-center my-[33px] mx-[85px]">
+          <div className="bg-[#FEECF0] h-[82px] flex justify-center items-center my-[33px]">
             <h2 className="uppercase text-[40px] text-[#E45C81] font-bold">
               Khuyến mãi hấp dẫn
             </h2>
           </div>
-          <div className="flex gap-[20px] flex-nowrap">
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
+          <div className="">
+            <Swiper
+              modules={[Navigation, Pagination]} // Thêm modules ở đây
+              navigation
+              pagination={false}
+              spaceBetween={20}
+              slidesPerView={5}
+            >
+              {products.map((product, index) => (
+                <SwiperSlide key={index}>
+                  <Product
+                    image={product.image}
+                    title={product.title}
+                    price={product.price}
+                    sold={product.sold}
+                    oldPrice={product.oldPrice}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
         <div>
-          <div className="bg-[#FEECF0] h-[82px] flex justify-center items-center my-[33px] mx-[85px]">
+          <div className="bg-[#FEECF0] h-[82px] flex justify-center items-center my-[33px]">
             <h2 className="uppercase text-[40px] text-[#E45C81] font-bold">
-              Khuyến mãi hấp dẫn
+              Sản phẩm bán chạy
             </h2>
           </div>
         </div>
@@ -130,7 +112,7 @@ export default function Home() {
           navigation
           pagination={false}
           spaceBetween={20}
-          slidesPerView={4}
+          slidesPerView={5}
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>
@@ -145,55 +127,30 @@ export default function Home() {
           ))}
         </Swiper>
         <div>
-          <div className="bg-[#FEECF0] h-[82px] flex justify-center items-center my-[33px] mx-[85px]">
+          <div className="bg-[#FEECF0] h-[82px] flex justify-center items-center my-[33px]">
             <h2 className="uppercase text-[40px] text-[#E45C81] font-bold">
               Hàng mới về
             </h2>
           </div>
-          <div className="flex gap-[20px] flex-nowrap">
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-            <Product
-              image={img1}
-              oldPrice={"254.000đ - 458.000đ"}
-              price={"200.000đ - 400.000đ"}
-              rating={5}
-              title={"Serum dưỡng ẩm số 1 sản xuất tại Việt Nam"}
-            />
-          </div>
+          <Swiper
+            modules={[Navigation, Pagination]} // Thêm modules ở đây
+            navigation
+            pagination={false}
+            spaceBetween={20}
+            slidesPerView={5}
+          >
+            {products.map((product, index) => (
+              <SwiperSlide key={index}>
+                <Product
+                  image={product.image}
+                  title={product.title}
+                  price={product.price}
+                  sold={product.sold}
+                  oldPrice={product.oldPrice}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
         <div className="mb-[33px] mx-[85px]">
           <div className=" flex justify-center items-center my-[23px]">

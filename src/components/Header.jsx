@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Header() {
+export default function Header({ path1, path2 }) {
   return (
     <div>
       <div className="bg-[#F88CAD] flex justify-center items-center h-[60px]">
-        <p className="text-white">MUA HÀNG TẠI WEBSITE - NHẬN VÔ VÀN ƯU ĐÃI</p>
+        <p className="text-white text-[24px]">
+          MUA HÀNG TẠI WEBSITE - NHẬN VÔ VÀN ƯU ĐÃI
+        </p>
       </div>
       <div className="flex flex-wrap items-center mb-[20px] mx-[84px] justify-between ">
         <Link
@@ -71,6 +73,19 @@ export default function Header() {
             </div>
           </Link>
         </div>
+      </div>
+      <div className="h-[62px] flex items-center pl-[85px] bg-[#FEECF0]">
+        <p className="text-[18px]">
+          Trang chủ &gt;&gt;{" "}
+          <span className={`${!path2 ? "text-[#E45C81]" : ""} font-bold`}>
+            {!path2 ? path1 : `${path1} &gt;&gt;`}
+          </span>
+          {path2 ? (
+            <span className="text-[#E45C81] font-bold">Trang chủ</span>
+          ) : (
+            ""
+          )}
+        </p>
       </div>
     </div>
   );

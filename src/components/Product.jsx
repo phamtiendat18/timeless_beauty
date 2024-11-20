@@ -16,14 +16,14 @@ export default function Product({
           alt={title}
           className="w-full h-[228px] object-cover"
         />
-        <div className="p-3">
-          <h3 className="text-[15px] font-[500] text-gray-800 text-left">
+        <div className="p-2">
+          <p className="text-[15px] font-[500] text-gray-800 text-left">
             {title}
-          </h3>
-          <p className="text-[13px] font-[400] text-lg line-through text-center">
+          </p>
+          <p className="text-[14px] font-[400] text-lg line-through text-center">
             {oldPrice}
           </p>
-          <p className="text-red-500 font-[400] text-[16px] text-center">
+          <p className="text-red-500 font-[400] text-[19px] text-center">
             {price}
           </p>
           <div className="flex items-center justify-between w-full">
@@ -100,7 +100,7 @@ export default function Product({
                   </svg>
                 </span>
               </div>
-              <div>Đã bán: {sold ? sold : "0"}</div>
+              <div className="text-[14px]">Đã bán: {sold ? sold : "0"}</div>
             </div>
           </div>
         </div>
