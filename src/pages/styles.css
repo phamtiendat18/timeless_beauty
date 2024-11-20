@@ -1,0 +1,13 @@
+.mySwiper {
+  padding: 1rem;
+}
+.swiper-slide {
+  width: fit-content;
+  display: flex !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f88cad !important;
+}
