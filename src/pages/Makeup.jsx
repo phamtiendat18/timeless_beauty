@@ -125,10 +125,11 @@ const products = [
   },
 ];
 
-export default function Products() {
+export default function Makeup() {
+  const [title, setTitle] = useState("Tất cả sản phẩm");
   return (
     <div>
-      <Header path1={"Sản phẩm"} />
+      <Header path1={"Sản phẩm"} path2={"Trang điểm"} />
       <div className="flex mx-[85px] mt-[45px]">
         <div>
           <Menu />
@@ -136,7 +137,7 @@ export default function Products() {
         <div className="w-full">
           <div className="flex items-center justify-between w-full">
             <div>
-              <h3 className="text-[40px] text-[#E45C81]">Tất cả sản phẩm</h3>
+              <h3 className="text-[40px] text-[#E45C81]">Trang điểm</h3>
             </div>
             <div>
               <div className="flex items-center space-x-2 text-[24px]">

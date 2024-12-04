@@ -10,14 +10,17 @@ import img2 from "../assets/images/image2.png";
 import img3 from "../assets/images/image3.png";
 import img4 from "../assets/images/image4.png";
 import img5 from "../assets/images/image5.png";
-import footer from "../assets/images/footer.png";
-import banner from "../assets/images/banner.png";
+import banner1 from "../assets/images/banner1.png";
+import banner2 from "../assets/images/banner2.png";
 import brand from "../assets/images/brand.png";
-import newsImg from "../assets/images/news-img.png";
+import newsImg1 from "../assets/images/news-img-1.png";
+import newsImg2 from "../assets/images/news-img-2.png";
+import newsImg3 from "../assets/images/news-img-3.png";
 import { Carousel, Flex } from "antd";
 import News from "../components/News";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import Footer from "../components/Footer";
 
 const products = [
   {
@@ -64,13 +67,39 @@ const products = [
   },
 ];
 
+const news = [
+  {
+    img: newsImg1,
+    title: "4 BƯỚC CHE QUẦNG THÂM BỌNG MẮT CỰC ĐƠN GIẢN",
+    des: "Tình trạng bọng mắt to, quầng thâm đậm ảnh hưởng trực tiếp đến nhan sắc khiến chị em thiếu tự tin trong cuộc sống ? Bạn sẽ trông già hơn thiếu sức sống ?... ",
+    time: "25/11/2024",
+  },
+  {
+    img: newsImg2,
+    title: `HỌC LỎM "NIGHT ROUNTINE" CHĂM DA CỦA TỶ TỶ DOUYIN`,
+    des: `Có thể nàng chưa biết chăm sóc làn da vào buổi tối không thể thiếu nếu nàng muốn có một làn da khỏe mạnh, rạng rỡ sau một ngày dài mệt mỏi...`,
+    time: "20/11/2024",
+  },
+  {
+    img: newsImg3,
+    title: "Nên bôi kem trị mụn trước hay sau kem chống nắng?",
+    des: "Khi chăm sóc da, nhiều người thắc mắc bôi kem trị mụn trước hay sau kem chống nắng. Việc hiểu rõ thứ tự này không chỉ giúp tối ưu hiệu quả ...",
+    time: "11/11/2024",
+  },
+];
+
 export default function Home() {
   return (
     <div>
       <Header path1={"Trang chủ"} />
-      <div className="w-full">
-        <img src={banner} className="w-full" alt="" />
-      </div>
+      <Carousel autoplay dots={false}>
+        <div className="w-full">
+          <img src={banner1} className="w-full" alt="" />
+        </div>
+        <div className="w-full">
+          <img src={banner2} className="w-full" alt="" />
+        </div>
+      </Carousel>
       <div className=" mb-[33px] mx-[85px]">
         <div>
           <div className="bg-[#FEECF0] h-[82px] flex justify-center items-center my-[33px]">
@@ -186,27 +215,15 @@ export default function Home() {
             </h2>
           </div>
           <div className="flex justify-between">
-            <News
-              img={newsImg}
-              title="4 BƯỚC CHE QUẦNG THÂM BỌNG MẮT CỰC ĐƠN GIẢN"
-              des="Tình trạng bọng mắt to, quầng thâm đậm ảnh hưởng trực tiếp đến nhan sắc khiến chị em thiếu tự tin trong cuộc sống ? Bạn sẽ trông già hơn thiếu sức sống ?... "
-            />
-            <News
-              img={newsImg}
-              title="4 BƯỚC CHE QUẦNG THÂM BỌNG MẮT CỰC ĐƠN GIẢN"
-              des="Tình trạng bọng mắt to, quầng thâm đậm ảnh hưởng trực tiếp đến nhan sắc khiến chị em thiếu tự tin trong cuộc sống ? Bạn sẽ trông già hơn thiếu sức sống ?... "
-            />
-            <News
-              img={newsImg}
-              title="4 BƯỚC CHE QUẦNG THÂM BỌNG MẮT CỰC ĐƠN GIẢN"
-              des="Tình trạng bọng mắt to, quầng thâm đậm ảnh hưởng trực tiếp đến nhan sắc khiến chị em thiếu tự tin trong cuộc sống ? Bạn sẽ trông già hơn thiếu sức sống ?... "
-            />
+            {news.map((i) => {
+              return (
+                <News img={i.img} title={i.title} des={i.des} time={i.time} />
+              );
+            })}
           </div>
         </div>
       </div>
-      <div>
-        <img src={footer} className="w-full" alt="" />
-      </div>
+      <Footer />
     </div>
   );
 }

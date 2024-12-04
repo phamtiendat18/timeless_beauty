@@ -11,3 +11,38 @@
 .swiper-button-next {
   color: #f88cad !important;
 }
+
+.ant-table-thead th {
+  font-size: 26px !important;
+}
+.custom-table .ant-table-thead th {
+  border-bottom: 2px solid #827e7e !important;
+}
+.ant-table-thead th .ant-checkbox-wrapper {
+  display: none !important;
+}
+
+.custom-table .ant-table-tbody tr:last-child > td {
+  border-bottom: 2px solid #827e7e !important;
+}
+/* Đổi màu nền khi checkbox được chọn */
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #f88cad !important; /* Màu nền khác (ví dụ: đỏ) */
+  border-color: #f88cad !important; /* Màu viền cùng màu nền */
+}
+
+/* Đổi màu nền khi hover vào checkbox */
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner {
+  border-color: #f88cad !important; /* Màu viền khi hover */
+}
+
+/* Tùy chỉnh kích thước checkbox nếu cần */
+.ant-checkbox-inner {
+  width: 20px !important; /* Đặt kích thước checkbox */
+  height: 20px !important;
+}
+
+.ant-btn.css-dev-only-do-not-override-49qm.ant-btn-primary.ant-btn-color-primary.ant-btn-variant-solid.ant-btn-lg.disable-button {
+  background-color: #827e7e !important;
+}
