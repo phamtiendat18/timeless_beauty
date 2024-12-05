@@ -23,10 +23,10 @@ export default function Product({
             className="w-full h-[228px] object-cover"
           />
           <div className="p-2">
-            <p className="text-[15px] font-[500] text-gray-800 text-left">
+            <p className="text-[15px] font-[500] text-gray-800 text-left line-clamp-2 ">
               {title}
             </p>
-            <p className="text-[14px] font-[400] text-lg line-through text-center">
+            <p className="text-[13px] font-[400] text-lg line-through text-center">
               {oldPrice}
             </p>
             <p className="text-red-500 font-[400] text-[19px] text-center">

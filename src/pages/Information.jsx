@@ -26,7 +26,7 @@ export default function Information() {
           <MenuUser number={1} />
         </div>
         <div className="pt-[15px] shadow-lg w-[996px] pb-[50px]">
-          <h1 className="text-[28px] text-[#E45C81] uppercase font-medium pl-[34px]">
+          <h1 className="text-[28px] text-[#E45C81] uppercase font-medium pl-[34px] py-[15px] border-b-2 border-[#F88CAD] mb-[30px]">
             Thông tin tài khoản
           </h1>
           <div className="mx-[82px] w-full">

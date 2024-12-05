@@ -13,6 +13,9 @@ import img5 from "../assets/images/image5.png";
 import banner1 from "../assets/images/banner1.png";
 import banner2 from "../assets/images/banner2.png";
 import brand from "../assets/images/brand.png";
+import brand2 from "../assets/images/brand2.png";
+import brand3 from "../assets/images/brand3.png";
+import brand4 from "../assets/images/brand4.png";
 import newsImg1 from "../assets/images/news-img-1.png";
 import newsImg2 from "../assets/images/news-img-2.png";
 import newsImg3 from "../assets/images/news-img-3.png";
@@ -181,30 +184,27 @@ export default function Home() {
             ))}
           </Swiper>
         </div>
-        <div className="mb-[33px] mx-[85px]">
+        <div className="mb-[33px]">
           <div className=" flex justify-center items-center my-[23px]">
             <h2 className="uppercase text-[40px] text-[#E45C81] font-bold">
               Thương hiệu nổi bật
             </h2>
           </div>
-          <div className="flex gap-[20px] flex-nowrap">
+          <div className="flex w-full flex-nowrap justify-between">
             <div className="w-[230px] h-[130px]">
               <img src={brand} alt="" />
             </div>
             <div className="w-[230px] h-[130px]">
-              <img src={brand} alt="" />
+              <img src={brand2} alt="" />
             </div>
             <div className="w-[230px] h-[130px]">
-              <img src={brand} alt="" />
+              <img src={brand4} alt="" />
             </div>
             <div className="w-[230px] h-[130px]">
-              <img src={brand} alt="" />
+              <img src={brand3} alt="" />
             </div>
             <div className="w-[230px] h-[130px]">
-              <img src={brand} alt="" />
-            </div>
-            <div className="w-[230px] h-[130px]">
-              <img src={brand} alt="" />
+              <img src={brand2} alt="" />
             </div>
           </div>
         </div>

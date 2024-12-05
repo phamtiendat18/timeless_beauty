@@ -4,6 +4,7 @@ import logo from "../assets/images/logo.png";
 import cartIcon from "../assets/images/cart-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AvatarDropDown from "./AvatarDropDown";
+import MenuDropDown from "./MenuDropDown";
 
 export default function Header({ path1, path2, path3 }) {
   const isLogin = localStorage.getItem("isLogin");
@@ -14,12 +15,12 @@ export default function Header({ path1, path2, path3 }) {
           MUA HÀNG TẠI WEBSITE - NHẬN VÔ VÀN ƯU ĐÃI
         </p>
       </div>
-      <div className="flex flex-wrap items-center mb-[20px] mx-[84px] justify-between ">
+      <div className="flex flex-wrap items-center my-[35px] mx-[84px] justify-between">
         <Link
-          to={"#"}
+          to={"/"}
           className="flex items-center mb-5 font-400 text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0 block w-[14%] uppercase text-center"
         >
-          <div className="w-[130px] h-[120px] flex items-center justify-center">
+          <div className="w-[157px] h-[78px] flex items-center justify-center">
             <img src={logo} />
           </div>
         </Link>
@@ -35,12 +36,7 @@ export default function Header({ path1, path2, path3 }) {
         >
           Giới thiệu
         </Link>
-        <Link
-          to={"/products"}
-          className=" font-400 text-gray-600 hover:text-gray-900 block w-[14%] uppercase text-[25px] text-center"
-        >
-          Sản phẩm
-        </Link>
+        <MenuDropDown />
         <Link
           to={"/contact"}
           className=" font-400 text-gray-600 hover:text-gray-900 block w-[14%] uppercase text-[25px] text-center"
@@ -62,19 +58,9 @@ export default function Header({ path1, path2, path3 }) {
                 </svg>
               </div>
             </Link>
-            {isLogin ? (
-              <div>
-                <AvatarDropDown />
-              </div>
-            ) : (
-              <Link>
-                <div className="w-[20px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z" />
-                  </svg>
-                </div>
-              </Link>
-            )}
+            <div>
+              <AvatarDropDown isLogin={isLogin} />
+            </div>
             <Link to={"/cart"}>
               <div className=" w-[20px] h-[20px]">
                 <img src={cartIcon} alt="" className="" />

@@ -2,8 +2,11 @@ import imgProd from "../../assets/images/imgProd.png";
 import shoppingIcon from "../../assets/images/shoppingIcon.png";
 import sale from "../../assets/images/sale.png";
 import QuantitySelector from "../QuantitySelector";
+import { useNavigate } from "react-router-dom";
+import { notification } from "antd";
 
 const ProductDetails = ({ src }) => {
+  const navigation = useNavigate();
   return (
     <div className="flex mt-[60px] gap-[23px]">
       {/* Hình ảnh sản phẩm */}
@@ -91,11 +94,19 @@ const ProductDetails = ({ src }) => {
           <QuantitySelector />
         </div>
         <div className="flex items-center space-x-4">
-          <button className=" text-[#E45C81] px-[26px] py-[15px] rounded-[10px] flex items-center text-[30px] border border-[#F88CAD]">
+          <button
+            className=" text-[#E45C81] px-[26px] py-[15px] rounded-[10px] flex items-center text-[30px] border border-[#F88CAD]"
+            onClick={() =>
+              notification.success({ message: "Thêm đơn hàng thành công!" })
+            }
+          >
             <img src={shoppingIcon} alt="" className="w-[40px] mr-2" />
             Thêm vào giỏ hàng
           </button>
-          <button className="w-[350px] text-white bg-[#F88CAD] py-[15px] rounded-[10px] text-[30px] border border-[#F88CAD]">
+          <button
+            className="w-[350px] text-white bg-[#F88CAD] py-[15px] rounded-[10px] text-[30px] border border-[#F88CAD]"
+            onClick={() => navigation("/cart/checkout")}
+          >
             Mua ngay
           </button>
         </div>

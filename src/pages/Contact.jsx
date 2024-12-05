@@ -9,7 +9,7 @@ export default function Contact() {
     <div>
       <Header path1={"Liên hệ"} />
       <div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-[34px]">
           <img src={contact1} alt="" />
         </div>
         <div className="flex justify-center my-[25px]">

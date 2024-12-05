@@ -109,7 +109,7 @@ export default function OrderHistory() {
       <div className="flex mt-[73px] mb-[45px] mx-[85px]">
         <MenuUser number={3} />
         <div className="shadow-lg ml-[26px]">
-          <div className="pl-[34px] pt-[15px] text-[28px] text-[#E45C81] uppercase font-semibold border-b-4 border-[#F88CAD]">
+          <div className="pl-[34px] py-[15px] text-[28px] text-[#E45C81] uppercase font-semibold border-b-2 border-[#F88CAD]">
             Đơn hàng đã mua
           </div>
           <div className="overflow-y-scroll max-h-[860px] px-[50px]">

@@ -25,19 +25,10 @@ const Checkout = () => {
     {
       id: 2,
       name: "Nước Tẩy Trang L'Oreal Tươi Mát Cho Da Dầu Hỗn Hợp",
-      image: img2,
-      type: "500ml",
-      price: 70000,
-      oldPrice: 120000,
-      quantity: 2,
-    },
-    {
-      id: 3,
-      name: "Kem Nền Maybelline Mỏng Nhẹ Kiềm Dầu Chống Nắng",
-      image: img4,
-      type: "130ml",
-      price: 100000,
-      oldPrice: 178000,
+      image: img5,
+      type: "200ml",
+      price: 150000,
+      oldPrice: 250000,
       quantity: 1,
     },
   ]);
@@ -298,8 +289,8 @@ const Checkout = () => {
                     </Button>
                   </div>
                   <div className="flex justify-between text-[25px] mb-[30px]">
-                    <div>Tổng tiền hàng (2 sản phẩm)</div>
-                    <div>140.000đ</div>
+                    <div>Tổng tiền hàng (1 sản phẩm)</div>
+                    <div>250.000đ</div>
                   </div>
                   <div className="flex justify-between text-[25px] mb-[30px]">
                     <div>Giảm giá</div>
@@ -312,7 +303,7 @@ const Checkout = () => {
                 </div>
                 <div className="flex justify-between text-[25px] mb-[22px]">
                   <div>Tổng thanh toán</div>
-                  <div>160.000đ</div>
+                  <div>170.000đ</div>
                 </div>
                 <div className="flex justify-between text-[25px]">
                   <Button

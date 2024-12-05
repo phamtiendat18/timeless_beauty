@@ -54,28 +54,10 @@ const Cart = () => {
     {
       id: 1,
       name: "Sữa Rửa Mặt Dành Cho Da Dầu CeraVe Foaming Cleanser",
-      image: img2,
+      image: img5,
       type: "200ml",
-      price: 50000,
-      oldPrice: 100000,
-      quantity: 1,
-    },
-    {
-      id: 2,
-      name: "Nước Tẩy Trang L'Oreal Tươi Mát Cho Da Dầu Hỗn Hợp",
-      image: img3,
-      type: "500ml",
-      price: 70000,
-      oldPrice: 120000,
-      quantity: 2,
-    },
-    {
-      id: 3,
-      name: "Kem Nền Maybelline Mỏng Nhẹ Kiềm Dầu Chống Nắng",
-      image: img4,
-      type: "130ml",
-      price: 100000,
-      oldPrice: 178000,
+      price: 150000,
+      oldPrice: 250000,
       quantity: 1,
     },
   ]);
@@ -244,7 +226,7 @@ const Cart = () => {
             Thanh toán
           </Button>
         </div>
-        <div className="mb-[33px]">
+        <div className="mb-[33px] mt-[43px]">
           <div className="flex justify-center items-center mb-[33px]">
             <h2 className="uppercase text-[40px] text-[#E45C81] font-bold">
               SẢN PHẨM TƯƠNG TỰ
