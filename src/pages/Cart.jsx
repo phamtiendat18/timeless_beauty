@@ -55,9 +55,9 @@ const Cart = () => {
       id: 1,
       name: "Sữa Rửa Mặt Dành Cho Da Dầu CeraVe Foaming Cleanser",
       image: img5,
-      type: "200ml",
-      price: 150000,
-      oldPrice: 250000,
+      type: "236ml",
+      price: 350000,
+      oldPrice: 450000,
       quantity: 1,
     },
   ]);
@@ -94,7 +94,12 @@ const Cart = () => {
       dataIndex: "name",
       key: "name",
       render: (text, record) => (
-        <div className="flex items-center justify-center py-3">
+        <div
+          className="flex items-center justify-center py-3 hover:cursor-pointer"
+          onClick={() => {
+            navigation("/products/product-detail");
+          }}
+        >
           <img
             src={record.image}
             alt={text}

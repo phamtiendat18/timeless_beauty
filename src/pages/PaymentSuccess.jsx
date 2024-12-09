@@ -1,6 +1,6 @@
 import { Button } from "antd";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import successIcon from "../assets/images/success-icon.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -27,7 +27,9 @@ export default function PaymentSuccess() {
           Mã đơn hàng: #FDt516 <br></br>Ngày đặt hàng: 11/11/2024 - 12:01
           <br></br>Thành tiền: 160.000đ <br></br>Phương thức thanh toán: Thanh
           toán khi nhận hàng <br></br>Bạn có thể xem chi tiết trong{" "}
-          <span className="text-[#F88CAD]">Đơn hàng của tôi</span>
+          <Link to={"/me/my-order"} className="text-[#F88CAD]">
+            Đơn hàng của tôi
+          </Link>
           <br></br>
         </div>
         <Button

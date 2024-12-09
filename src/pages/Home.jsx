@@ -16,6 +16,7 @@ import brand from "../assets/images/brand.png";
 import brand2 from "../assets/images/brand2.png";
 import brand3 from "../assets/images/brand3.png";
 import brand4 from "../assets/images/brand4.png";
+import evaldate from "../assets/images/evaldate.png";
 import newsImg1 from "../assets/images/news-img-1.png";
 import newsImg2 from "../assets/images/news-img-2.png";
 import newsImg3 from "../assets/images/news-img-3.png";
@@ -207,6 +208,9 @@ export default function Home() {
               <img src={brand2} alt="" />
             </div>
           </div>
+        </div>
+        <div className="">
+          <img src={evaldate} className="w-full" alt="" />
         </div>
         <div>
           <div className="flex justify-center items-center my-[33px] mx-[85px]">

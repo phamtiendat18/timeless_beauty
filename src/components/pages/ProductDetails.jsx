@@ -81,7 +81,7 @@ const ProductDetails = ({ src }) => {
             <div className="px-[12px] py-[11px] shadow-md border border-white rounded-[8px] mr-[30px] hover:border hover:border-[#F88CAD]">
               88ml
             </div>
-            <div className="px-[12px] py-[11px] shadow-md border border-white rounded-[8px] mr-[30px] hover:border hover:border-[#F88CAD]">
+            <div className="px-[12px] py-[11px] shadow-md rounded-[8px] mr-[30px] border border-[#F88CAD]">
               236ml
             </div>
             <div className="px-[12px] py-[11px] shadow-md border border-white rounded-[8px] mr-[30px] hover:border hover:border-[#F88CAD]">

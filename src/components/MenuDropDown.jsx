@@ -30,6 +30,7 @@ const MenuDropDown = () => {
           style={{
             cursor: "pointer",
             fontWeight: 400,
+            fontFamily: "Roboto Slab",
           }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}

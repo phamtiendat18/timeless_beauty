@@ -1,5 +1,6 @@
 import { Button } from "antd";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductPaid({
   title,
@@ -9,6 +10,8 @@ export default function ProductPaid({
   price,
   quantity,
 }) {
+  const navigation = useNavigate()
+
   return (
     <div className="w-[892px] border-b-2 border-[#F88CAD] py-[20px]">
       <div className="flex justify-between">
@@ -53,6 +56,7 @@ export default function ProductPaid({
             borderRadius: "8px",
             color: "white",
           }}
+          onClick={() => navigation("/products/product-detail")}
         >
           Đánh giá
         </button>

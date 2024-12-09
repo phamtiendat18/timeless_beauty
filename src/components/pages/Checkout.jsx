@@ -26,9 +26,9 @@ const Checkout = () => {
       id: 2,
       name: "Nước Tẩy Trang L'Oreal Tươi Mát Cho Da Dầu Hỗn Hợp",
       image: img5,
-      type: "200ml",
-      price: 150000,
-      oldPrice: 250000,
+      type: "236ml",
+      price: 350000,
+      oldPrice: 450000,
       quantity: 1,
     },
   ]);
@@ -290,7 +290,7 @@ const Checkout = () => {
                   </div>
                   <div className="flex justify-between text-[25px] mb-[30px]">
                     <div>Tổng tiền hàng (1 sản phẩm)</div>
-                    <div>250.000đ</div>
+                    <div>350.000đ</div>
                   </div>
                   <div className="flex justify-between text-[25px] mb-[30px]">
                     <div>Giảm giá</div>
@@ -303,7 +303,7 @@ const Checkout = () => {
                 </div>
                 <div className="flex justify-between text-[25px] mb-[22px]">
                   <div>Tổng thanh toán</div>
-                  <div>170.000đ</div>
+                  <div>370.000đ</div>
                 </div>
                 <div className="flex justify-between text-[25px]">
                   <Button
